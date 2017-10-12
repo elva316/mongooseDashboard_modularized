@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This animal: </h1>
+    <%  console.log("HIIII") %>
+
+    <% if(typeof(animal) != 'undefined') { %>
+        <p>Name:  <%=animal[0].name%></p>
+        <p>Description:  <%=animal[0].description%></p>
+    <% } %>
+    <br>
+    <button ><a style="text-decoration: none" href="/">back</a></button>
+  </body>
+</html>

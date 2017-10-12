@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>Here are the animal list!</h2>
+    <button><a href="/mongoose/new">add2</a></button>
+    <% if(typeof(errors) != 'undefined' ) { %>
+     <% for (var x in errors) { %>
+             <h3><%= errors[x].message %></h3>
+     <% } %>
+     <% } %>
+
+  <div id="">
+    <% if(typeof(animals) != 'undefined') { %>
+       <% for (var idx in animals){ %>
+        <p>Name:  <%=animals[idx].name%></p>
+        <p>Description:  <%=animals[idx].description%></p>
+
+        <button><a  style="text-decoration: none" href="/mongoose/<%=animals[idx].id%>">Show</a></button>
+        <button><a  style="text-decoration: none" href="/mongoose/new">Add</a></button>
+        <button><a  style="text-decoration: none" href="/mongoose/edit/<%=animals[idx].id%>">Edit</a></button>
+        <button><a  style="text-decoration: none" href="/mongoose/destroy/<%=animals[idx].id%>">Destroy</a></button>
+        <hr>
+        <br>
+        <% } %>
+    <% } %>
+  </div>
+  </body>
+</html>
